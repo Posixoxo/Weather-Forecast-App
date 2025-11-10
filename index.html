@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Young+Serif&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Weather app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <img src="assets/images/logo.svg" alt="logo" class="img-1">
+      <div class="nav-2" id="unitsToggle">
+        <img src="assets/images/icon-units.svg" alt="units">
+        <p>Units</p>
+        <img src="assets/images/icon-dropdown.svg" alt="drop" id="dropdownIcon">
+      </div>
+
+          <!-- Dropdown Menu -->
+    <div class="dropdown-menu" id="dropdownMenu">
+      <h3>Switch to Imperial/Metric</h3>
+      
+      <div class="dropdown-section">
+        <h4>Temperature</h4>
+        <label>
+          <input type="radio" name="temperature" value="celsius" checked>
+          <span>Celsius (°C)</span>
+        </label>
+        <label>
+          <input type="radio" name="temperature" value="fahrenheit">
+          <span>Fahrenheit (°F)</span>
+        </label>
+      </div>
+      
+      <div class="dropdown-section">
+        <h4>Wind Speed</h4>
+        <label>
+          <input type="radio" name="windSpeed" value="kmh" checked>
+          <span>km/h</span>
+        </label>
+        <label>
+          <input type="radio" name="windSpeed" value="mph">
+          <span>mph</span>
+        </label>
+      </div>
+      
+      <div class="dropdown-section">
+        <h4>Precipitation</h4>
+        <label>
+          <input type="radio" name="precipitation" value="mm" checked>
+          <span>Millimeters (mm)</span>
+        </label>
+        <label>
+          <input type="radio" name="precipitation" value="inches">
+          <span>Inches (in)</span>
+        </label>
+      </div>
+    </div>
+
+    </nav>
+  </header>
+
+
+  <main>
+    <section>
+      <div class="skyfall">
+        <h1>How's the sky looking today?</h1>
+      </div>
+  
+      <div class="Search">
+        <div class="skyfall-2">
+          <div class="search-input-wrapper">
+            <img src="assets/images/icon-search.svg" alt="search" class="search-icon">
+            <input type="text" placeholder="Search for a city, e.g., New York" class="input">
+          </div>
+          <button>Search</button>
+        </div>
+      </div>
+    </section>
+  
+
+<div class="son-man">
+   <section class="desktop-drop">   
+      <div class="forecast">
+  
+        <div class="cast-text">
+          <h4>Berlin, Germany</h4>
+          <p>Tuesday, Aug 5, 2025</p>
+        </div>
+  
+        <div class="cast-asst">
+          <img src="assets/images/icon-sunny.webp" alt="weather icon" class="cast-img">
+            <h2>20°</h2>
+        </div>
+  
+      </div>
+  
+  
+  
+  
+  
+      <div class="mood-tabs">
+  
+        <div class="mood">
+          <p>Feels like</p>
+          <span>18°</span>
+        </div>
+  
+        <div class="mood">
+          <p>Humidity</p>
+          <span>46%</span>
+        </div>
+  
+        <div class="mood">
+          <p>Wind</p>
+          <span>14 km/h</span>
+        </div>
+  
+        <div class="mood">
+          <p>Precipitation</p>
+          <span>0 mm</span>
+        </div>
+  
+      </div>
+  
+  
+  
+  
+  
+      <div class="day-cast">
+        <h3>Daily forecast</h3>
+        <!-- Daily forecast for the next 7 days here -->
+  
+        <div class="day-cast-tabs">
+  
+          <div class="cast-tabs">
+            <p>Tue</p>
+            <img src="assets/images/icon-rain.webp" alt="weather icon" class="img-z">
+          <div class="tabs">
+            <p>20°</p>
+            <p>14°</p>
+         </div>
+        </div>
+  
+  
+            <div class="cast-tabs">
+            <p>Wed</p>
+            <img src="assets/images/icon-drizzle.webp" alt="weather icon" class="img-z">
+          <div class="tabs">
+            <p>21°</p>
+            <p>15°</p>
+         </div>
+        </div>
+  
+  
+              <div class="cast-tabs">
+            <p>Thu</p>
+            <img src="assets/images/icon-sunny.webp" alt="weather icon" class="img-z">
+          <div class="tabs">
+            <p>24°</p>
+            <p>14°</p>
+         </div>
+        </div>
+  
+  
+              <div class="cast-tabs">
+            <p>Fri</p>
+            <img src="assets/images/icon-partly-cloudy.webp" alt="weather icon" class="img-z">
+          <div class="tabs">
+            <p>25°</p>
+            <p>13°</p>
+         </div>
+        </div>
+  
+  
+              <div class="cast-tabs">
+            <p>Sat</p>
+            <img src="assets/images/icon-storm.webp" alt="weather icon" class="img-z">
+          <div class="tabs">
+            <p>21°</p>
+            <p>15°</p>
+         </div>
+        </div>
+  
+  
+              <div class="cast-tabs">
+            <p>Sun</p>
+            <img src="assets/images/icon-drizzle.webp" alt="weather icon" class="img-z">
+          <div class="tabs">
+            <p>25°</p>
+            <p>16°</p>
+         </div>
+        </div>
+  
+  
+              <div class="cast-tabs">
+            <p>Mon</p>
+            <img src="assets/images/icon-fog.webp" alt="weather icon" class="img-z">
+          <div class="tabs">
+            <p>24°</p>
+            <p>15°</p>
+         </div>
+        </div>
+  
+        </div>
+  
+  
+      </div>
+  
+    </section>
+
+
+
+
+
+
+
+
+  <section class="desktop-drop2">
+    <div class="hourly-container">
+
+      <div class="hour-cast">
+        <h3>Hourly forecast</h3>
+
+      <!-- date-cast contains a custom dropdown list -->
+      <div class="date-cast" id="dateCast" aria-haspopup="listbox" tabindex="0">
+        <p id="selectedDay">Tuesday</p>
+        <img src="assets/images/icon-dropdown.svg" alt="dropdown-icon" id="dateToggle" />
+
+        <!-- hidden custom dropdown list -->
+        <ul class="date-list" id="dateList" role="listbox" aria-labelledby="selectedDay" hidden>
+          <li role="option" tabindex="0">Tuesday</li>
+          <li role="option" tabindex="0">Wednesday</li>
+          <li role="option" tabindex="0">Thursday</li>
+          <li role="option" tabindex="0">Friday</li>
+          <li role="option" tabindex="0">Saturday</li>
+          <li role="option" tabindex="0">Sunday</li>
+          <li role="option" tabindex="0">Monday</li>
+        </ul>
+      </div>
+    </div>
+
+        <!-- Hourly forecast for the selected day here -->
+
+        <div class="fore-tabs">
+          <div class="time-tabs">
+            <img src="assets/images/icon-overcast.webp" alt="weather icon" class="img-x">
+            <p class="time-label">3 PM</p>
+          </div>
+          <p class="temp">20°</p>
+        </div>
+
+
+        <div class="fore-tabs">
+          <div class="time-tabs">
+            <img src="assets/images/icon-partly-cloudy.webp" alt="weather icon" class="img-x">
+            <p class="time-label">4 PM</p>
+          </div>
+          <p class="temp">20°</p>
+        </div>
+
+
+        <div class="fore-tabs">
+          <div class="time-tabs">
+            <img src="assets/images/icon-sunny.webp" alt="weather icon" class="img-x">
+            <p class="time-label">5 PM</p>
+          </div>
+          <p class="temp">20°</p>
+        </div>
+
+
+        <div class="fore-tabs">
+          <div class="time-tabs">
+            <img src="assets/images/icon-overcast.webp" alt="weather icon" class="img-x">
+            <p class="time-label">6 PM</p>
+          </div>
+          <p class="temp">19°</p>
+        </div>
+
+
+        <div class="fore-tabs">
+          <div class="time-tabs">
+            <img src="assets/images/icon-drizzle.webp" alt="weather icon" class="img-x">
+            <p class="time-label">7 PM</p>
+          </div>
+          <p class="temp">18°</p>
+        </div>
+
+
+        <div class="fore-tabs">
+          <div class="time-tabs">
+            <img src="assets/images/icon-fog.webp" alt="weather icon" class="img-x">
+            <p class="time-label">8 PM</p>
+          </div>
+          <p class="temp">18°</p>
+        </div>
+
+
+        <div class="fore-tabs">
+          <div class="time-tabs">
+            <img src="assets/images/icon-drizzle.webp" alt="weather icon" class="img-x">
+            <p class="time-label">9 PM</p>
+          </div>
+          <p class="temp">17°</p>
+        </div>
+
+
+        <div class="fore-tabs">
+          <div class="time-tabs">
+            <img src="assets/images/icon-overcast.webp" alt="weather icon" class="img-x">
+            <p class="time-label">10 PM</p>
+          </div>
+          <p class="temp">17°</p>
+        </div>
+
+    </div>
+
+  </section>
+</div>
+  </main>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

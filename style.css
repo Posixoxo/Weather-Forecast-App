@@ -1,0 +1,903 @@
+body{
+    background-color: hsl(243, 96%, 9%);
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-family: "DM Sans", sans-serif;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+
+.img-1{
+    display: block;
+    width: 150px;
+    margin: 15px 15px;
+    height: auto;
+}  
+
+.nav-2{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin: 15px 15px;
+    border: 1px solid transparent;
+    background-color: hsl(243, 27%, 20%);
+    height: 30px;
+    border-radius: 5px;
+    width: 100px;
+    cursor: pointer; /* Shows it's clickable */
+    transition: background-color 0.3s ease;
+}
+
+.nav-2:hover{
+    background-color: hsl(243, 27%, 25%);
+}
+
+.nav-2 img{
+    margin: auto 5px;
+}
+
+.nav-2 p{
+    font-size: 16px;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu{
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    background-color: hsl(243, 27%, 20%);
+    border-radius: 8px;
+    padding: 20px;
+    min-width: 250px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 1000;
+}
+
+.dropdown-menu.active{
+    display: block;
+}
+
+.dropdown-menu h3{
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    color: #fff;
+    border-bottom: 1px solid hsl(243, 27%, 30%);
+    padding-bottom: 10px;
+}
+
+.dropdown-section{
+    margin-bottom: 15px;
+}
+
+.dropdown-section:last-child{
+    margin-bottom: 0;
+}
+
+.dropdown-section h4{
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    color: #aaa;
+    font-weight: 500;
+}
+
+.dropdown-section label{
+    display: flex;
+    align-items: center;
+    padding: 6px 0;
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+}
+
+.dropdown-section label:hover{
+    color: #4a9eff;
+}
+
+.dropdown-section input[type="radio"]{
+    margin-right: 10px;
+    cursor: pointer;
+    accent-color: #4a9eff;
+}
+
+.skyfall h1{
+    font-size: 60px;
+    text-align: center;
+    margin-top: 60px;
+    align-items: center;
+    font-family: Plus Jakarta Sans;
+}
+
+.skyfall-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.Search{
+    margin-top: 50px;
+}
+
+.search-input-wrapper{
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+}
+
+.search-icon{
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    pointer-events: none; /* Allows clicking through the icon to the input */
+}
+
+.input{
+    width: 100%;
+    border: 1px solid transparent;
+    height: 50px;
+    background: hsl(243, 23%, 24%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    padding-left: 45px; /* Space for icon + gap */
+    padding-right: 15px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.input::placeholder{
+    color: hsl(0, 0%, 60%);
+}
+
+.input:focus{
+    outline: none;
+    border: 1px solid hsl(233, 67%, 56%);
+}
+
+.skyfall-2 button{
+    width: 100%;
+    max-width: 300px;
+    height: 50px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: hsl(233, 67%, 56%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.skyfall-2 button:hover{
+    background-color: hsl(233, 67%, 50%);
+}
+
+.forecast{
+    display: flex;
+    flex-direction: column;
+    margin: 40px 10px 0 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 280px;
+    border-radius: 15px;
+    border: 1px solid transparent;
+    background: url('assets/images/bg-today-small.svg') no-repeat center/cover;
+}
+
+.cast-text{
+    line-height: 0.1;
+}
+
+.cast-text h4{
+    font-size: 30px;
+    text-align: center;
+    padding: 40px 0 0 0;
+}
+
+.cast-text p{
+    font-size: 20px;
+    text-align: center;
+}
+
+.cast-asst{
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto 40px auto;
+    gap: 15px;
+}
+
+.cast-img{
+    display: block;
+    max-width: 100%;
+    width: 120px;
+    height: auto;
+    margin: 15px auto;
+}
+
+.cast-asst h2{
+    margin: 15px auto 5px auto;
+    font-size: 100px;
+}
+
+.mood-tabs{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+    gap: 15px;
+    margin: 0 auto 40px auto;
+    padding: 0 10px;
+    max-width: 1200px;
+}
+
+.mood{
+    height: 100px;
+    border-radius: 10px;
+    border: 2px solid hsl(243, 27%, 30%);
+    background-color: hsl(243, 27%, 30%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.mood p{
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    color: hsl(0, 0%, 70%);
+}
+
+.mood span{
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+
+
+
+/* ===== Shared layout variables ===== */
+:root{
+    --container-max-width: 1200px;
+    --container-padding-xs: 12px;   /* used on very small screens (320/375) */
+    --container-padding-sm: 14px;   /* phones */
+    --container-padding-md: 16px;   /* tablets */
+    --container-padding-lg: 20px;   /* large screens */
+    --grid-gap-xs: 12px;
+    --grid-gap-sm: 14px;
+    --grid-gap-md: 16px;
+    --card-border: 2px;
+    --card-radius: 12px;
+    --card-bg: hsl(243, 27%, 20%);
+    --card-border-color: hsl(243, 27%, 30%);
+    --muted-text: hsl(250, 6%, 84%);
+  }
+  
+  /* ===== Reset / box-sizing for predictable math ===== */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+
+  .mood-tabs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* default on smallest screens */
+    gap: var(--grid-gap-xs);
+    max-width: var(--container-max-width);
+    margin: 25px auto 40px auto;
+    padding-inline: var(--container-padding-xs);
+  }
+  
+  /* mood card */
+  .mood {
+    height: 120px;
+    border-radius: var(--card-radius);
+    border: var(--card-border) solid var(--card-border-color);
+    background-color: var(--card-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 15px;
+    gap: 12px;
+  }
+  
+  .mood p { margin: 4px 0 5px 0; font-size: 18px; color: var(--muted-text); }
+  .mood span { font-size: 32px; font-weight: 400; }
+  
+  /* ===== DAY CAST container - exact same container sizing and centering as mood-tabs ===== */
+  .day-cast {
+    max-width: var(--container-max-width);
+    margin: 25px auto 40px auto;
+    padding-inline: var(--container-padding-xs); /* match mood-tabs at smallest size */
+  }
+  
+  .day-cast h3 {
+    margin: 0 0 12px 0;
+    font-size: 20px;
+    color: var(--muted-text);
+    padding-left: 0;
+  }
+  
+  .day-cast-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* base: 3 cols at smallest widths -> 3-3-1 for 7 items */
+    gap: var(--grid-gap-xs);
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding-inline: 0; /* parent .day-cast supplies padding-inline to align edges with mood-tabs */
+  }
+  
+  .cast-tabs {
+    width: 100%;                /* important: fill grid column */
+    min-height: 150px;         /* visual balance */
+    border-radius: 15px;
+    border: var(--card-border) solid var(--card-border-color);
+    background-color: var(--card-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    gap: 12px;
+  }
+  
+  /* label, icon and temps */
+  .cast-tabs > p:first-child {
+    margin: 0;
+    font-weight: 900;
+    font-size: 18px;
+    color: var(--muted-text);
+    text-align: center;
+  }
+  
+  .img-z {
+    display: block;
+    width: 60px;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .tabs p {
+    margin: 8px 0 0 0;
+    font-weight: 900;
+    color: var(--muted-text);
+  }
+
+
+
+  /* ---------- Hourly container ---------- */
+.hourly-container {
+    padding: 20px;
+    margin: 30px 10px;
+    background-color: hsl(243, 27%, 20%);
+    border-radius: 15px;
+    box-sizing: border-box;
+    max-width: 420px; /* adjust to the card width you use; this keeps layout tidy */
+  }
+  
+  .hour-cast {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .hour-cast h3 {
+    margin: 0;
+    font-size: 20px;
+    color: hsl(250, 6%, 84%);
+    font-weight: 700;
+  }
+
+  .date-cast {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: hsl(243, 23%, 30%);
+    border-radius: 8px;
+    padding: 6px 10px;
+    min-width: 110px;
+    height: 36px;
+    cursor: pointer;
+    position: relative; /* for dropdown list positioning */
+    border: 1px solid rgba(255,255,255,0.02);
+  }
+  
+  .date-cast p {
+    margin: 0;
+    color: hsl(250, 6%, 84%);
+    font-weight: 600;
+    font-size: 14px;
+  }
+  
+  .date-cast img {
+    width: 18px;
+    height: auto;
+    display: block;
+    pointer-events: none;
+  }
+  
+  /* dropdown list (hidden by default) */
+  .date-list {
+    list-style: none;
+    margin: 6px 0 0 0;
+    padding: 6px 0;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 8px);
+    background: hsl(243, 23%, 30%);
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    border: 1px solid rgba(255,255,255,0.02);
+    min-width: 140px;
+    z-index: 50;
+  }
+  
+  .date-list li {
+    padding: 8px 12px;
+    color: hsl(250, 6%, 84%);
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  /* hover/focus states for accessibility */
+  .date-list li:hover,
+  .date-list li:focus {
+    background: hsl(243, 27%, 28%);
+    outline: none;
+  }
+  
+  /* ---------- Fore-tabs (rows) ---------- */
+  /* make each row a two-column flex: left = icon+time, right = temperature pinned right */
+  .fore-tabs{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    gap: 12px;
+    background-color: hsl(243, 23%, 30%);
+    border: 1px solid hsl(243, 23%, 30%);
+    border-radius: 8px;
+    padding: 12px;
+    margin: 12px 0;
+    box-sizing: border-box;
+  }
+  
+  /* left block: icon + time label */
+  .time-tabs{
+    display: flex;
+    align-items: center;
+    gap: 12px;   
+    min-width: 0;  /* allows text to shrink if needed */
+  }
+  
+  .img-x{
+    width: 36px;
+    height: auto;
+    display: block;
+    flex: 0 0 36px; /* fixed image footprint so layout stays stable */
+    margin-left: 2px; /* small breathing room from left edge */
+  }
+  
+  .time-label {
+    margin: 0;
+    color: hsl(250, 6%, 84%);
+    font-weight: 600;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .temp {
+    margin: 0;
+    color: hsl(250, 6%, 84%);
+    font-weight: 800;
+    font-size: 16px;
+    flex: 0 0 44px;    /* reserved width so it doesn't move across breakpoints */
+    text-align: right;
+  }
+
+
+  
+  /* ===== media queries for mood-tabs and day-cast-tabs ===== */
+  @media (min-width: 320px) {
+    :root { /* ensure variables applied; this local reassign helps some old browsers */
+      --container-padding: var(--container-padding-xs);
+    }
+  
+    .mood-tabs { padding-inline: var(--container-padding-xs); gap: var(--grid-gap-xs); }
+    .day-cast { padding-inline: var(--container-padding-xs); }
+    .day-cast-tabs { gap: var(--grid-gap-xs); }
+  
+    .cast-tabs { min-height: 140px; padding: 10px; }
+    .cast-tabs > p:first-child { font-size: 16px; }
+    .tabs { gap: 14px; }
+  }
+  
+  /* Larger phones */
+  @media (min-width: 480px) {
+    .mood-tabs { padding-inline: var(--container-padding-sm); gap: var(--grid-gap-sm); }
+    .day-cast { padding-inline: var(--container-padding-sm); }
+    .day-cast-tabs { gap: var(--grid-gap-sm); }
+  
+    .cast-tabs { min-height: 150px; padding: 12px; }
+  }
+  
+  /* Tablets: keep 3 columns for 3-3-1 but adjust spacing to match mood-tabs */
+  @media (min-width: 600px) {
+    .mood-tabs { grid-template-columns: repeat(3, 1fr); gap: var(--grid-gap-md); padding-inline: var(--container-padding-md); }
+    .day-cast { padding-inline: var(--container-padding-md); }
+    .day-cast-tabs { grid-template-columns: repeat(3, 1fr); gap: var(--grid-gap-md); }
+  
+    .cast-tabs { min-height: 160px; padding: 14px; }
+  }
+  
+    /* Small desktops: switch mood-tabs to 4 columns, keep day-cast 3 columns but align edges */
+  @media (min-width: 900px) {
+    .mood-tabs { grid-template-columns: repeat(4, 1fr); gap: var(--grid-gap-md); padding-inline: var(--container-padding-md); }
+  
+    /* Strategy A: keep cast 3 columns, but ensure padding and gap are identical to mood-tabs
+       so left/right edges continue to align. This keeps the 3-3-1 "block" below the mood grid. */
+    .day-cast { padding-inline: var(--container-padding-md); }
+    .day-cast-tabs { grid-template-columns: repeat(3, 1fr); gap: var(--grid-gap-md); }
+  
+    .cast-tabs { min-height: 170px; padding: 16px; }
+  }
+
+  
+    /* ---------- media queries for hourly forecast  ---------- */
+  
+  @media (max-width: 375px) {
+    .hourly-container { 
+        padding: 16px;
+        max-width: 375px;
+    }
+    .date-cast { min-width: 100px; height: 34px; padding: 6px 8px; }
+    .date-list { min-width: 130px; }
+    .img-x { width: 32px; flex: 0 0 32px; margin-left: 0; }
+    .time-label { font-size: 13px; }
+    .temp { flex: 0 0 40px; font-size: 15px; }
+    .fore-tabs { padding: 10px; margin: 10px 0; }
+}
+
+/* Medium phones (376px - 767px) */
+@media (min-width: 376px) and (max-width: 539px) {
+    .hourly-container { 
+        max-width: 460px;
+    }
+    .img-x { width: 36px; flex: 0 0 36px; }
+    .temp { flex: 0 0 44px; }
+    .time-label { font-size: 14px; }
+}
+
+@media (min-width: 540px) and (max-width: 767px) {
+    .hourly-container { 
+        max-width: 510px; 
+        padding: 20px;
+        margin: 30px 15px; 
+    }
+    .hour-cast h3 {
+        font-size: 21px;
+    }
+    .date-cast {
+        min-width: 115px;
+        height: 36px;
+    }
+    .img-x { 
+        width: 38px; 
+        flex: 0 0 38px; 
+    }
+    .temp { 
+        flex: 0 0 46px; 
+        font-size: 16px; 
+    }
+    .time-label { 
+        font-size: 14px; 
+    }
+    .fore-tabs { 
+        padding: 13px; 
+        margin: 12px 0;
+    }
+}
+
+/* Tablets (768px - 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .hourly-container { 
+        max-width: 720px; 
+        padding: 24px;
+        margin: 30px auto;
+    }
+    .hour-cast h3 {
+        font-size: 22px;
+    }
+    .date-cast {
+        min-width: 120px;
+        height: 38px;
+        padding: 8px 12px;
+    }
+    .date-cast p {
+        font-size: 15px;
+    }
+    .img-x { 
+        width: 40px; 
+        flex: 0 0 40px; 
+    }
+    .temp { 
+        flex: 0 0 48px; 
+        font-size: 17px; 
+    }
+    .time-label { 
+        font-size: 15px; 
+    }
+    .fore-tabs { 
+        padding: 14px; 
+        margin: 14px 0;
+    }
+}
+
+
+
+/* ====== DESKTOP LAYOUT (1024px and above) ====== */
+@media (min-width: 1024px) {
+  
+  /* ---------- MAIN GRID WRAPPER ---------- */
+  header,
+  main {
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .son-man {
+    display: grid;
+    grid-template-columns: 2.5fr 1.5fr;
+    gap: 30px;
+    padding: 0 40px;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  /* Navbar spans full width */
+  .navbar {
+    grid-column: 1 / -1;
+  }
+
+  /* ---------- LEFT SIDE (desktop-drop) ---------- */
+  .desktop-drop {
+    grid-column: 1;
+  }
+
+  /* ---------- SEARCH SECTION - HORIZONTAL LAYOUT ---------- */
+  .skyfall h1 {
+    font-size: 50px;
+    margin-top: 40px;
+  }
+  
+  .skyfall-2 {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    max-width: 700px;
+    margin: 50px auto 0 auto;
+  }
+
+  .search-input-wrapper {
+    flex: 1;
+    max-width: 500px;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .skyfall-2 button {
+    flex: 0 0 auto;
+    width: 140px;
+    max-width: 140px;
+    margin-top: 0;
+    padding: 10px 20px;
+    white-space: nowrap;
+  }
+
+  /* ---------- FORECAST CARD ---------- */
+  .forecast {
+    background: url('assets/images/bg-today-large.svg') no-repeat center/cover;
+    height: 340px;
+    margin: 40px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    padding-top: 50px;
+  }
+
+  .cast-text{
+    margin: 0 20px 100px 20px;
+  }
+
+  .cast-asst {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 28px; 
+    margin-right: 20px;
+  }
+
+  .cast-img {
+    width: 150px;
+    margin: 0;
+  }
+
+  .cast-asst h2 {
+    font-size: 120px;
+    margin: 0;
+  }
+
+  .cast-text h4 {
+    font-size: 35px;
+  }
+
+  .cast-text p {
+    font-size: 19px;
+    text-align: left;
+  }
+
+  /* ---------- MOOD CARDS ---------- */
+  .mood-tabs {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 100%;
+    padding-inline: 0;
+    margin: 25px 0 40px 0;
+  }
+
+  .mood {
+    height: 140px;
+    padding: 18px;
+  }
+
+  .mood span {
+    font-size: 34px;
+  }
+
+  /* ---------- DAILY FORECAST ---------- */
+  .day-cast {
+    margin: 40px 0;
+    padding-inline: 0;
+  }
+
+  .day-cast h3 {
+    font-size: 22px;
+    margin-bottom: 18px;
+  }
+
+  .day-cast-tabs {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 18px;
+    padding-inline: 0;
+  }
+
+  .cast-tabs {
+    min-height: 180px;
+    padding: 16px;
+  }
+
+  .cast-tabs > p:first-child {
+    font-size: 18px;
+  }
+
+  .img-z {
+    width: 70px;
+  }
+
+  .tabs {
+    gap: 18px;
+  }
+
+  .tabs p {
+    font-size: 18px;
+  }
+
+  /* ---------- RIGHT SIDE (desktop-drop2) ---------- */
+  .desktop-drop2 {
+    grid-column: 2;
+    padding-top: 0;
+  }
+
+  .hourly-container {
+    max-width: 100%;
+    background-color: hsl(243, 27%, 20%);
+    border-radius: 15px;
+    padding: 24px;
+    margin: 40px 0 0 0;
+    position: sticky;
+    top: 20px;
+  }
+
+  .hour-cast h3 {
+    font-size: 22px;
+  }
+
+  .date-cast {
+    min-width: 130px;
+    height: 38px;
+  }
+
+  .fore-tabs {
+    padding: 14px 16px;
+    margin: 14px 0;
+  }
+
+  .img-x {
+    width: 40px;
+    flex: 0 0 40px;
+  }
+
+  .time-label {
+    font-size: 15px;
+  }
+
+  .temp {
+    flex: 0 0 48px;
+    font-size: 16px;
+  }
+
+}
+
+/* ====== EXTRA LARGE SCREENS (1400px and above) ====== */
+@media (min-width: 1400px) {
+  header,
+  main {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .skyfall h1 {
+    font-size: 80px;
+  }
+
+  .son-man {
+    gap: 40px;
+  }
+
+  .mood-tabs {
+    gap: 24px;
+  }
+
+  .day-cast-tabs {
+    gap: 20px;
+  }
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center;
+  padding: 20px;
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+
+
