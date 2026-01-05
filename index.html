@@ -8,9 +8,9 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Young+Serif&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Caprasimo&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kumbh+Sans:wght,YOPQ@100..900,300&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Young+Serif&display=swap" rel="stylesheet">
   
-  <title>Frontend Mentor | Weather app</title>
+  <title>Weather app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -19,6 +19,7 @@
   </style>
 </head>
 <body>
+  
   <header>
     <nav class="navbar">
       <img src="assets/images/logo.svg" alt="logo" class="img-1">
@@ -29,49 +30,54 @@
       </div>
 
           <!-- Dropdown Menu -->
-    <div class="dropdown-menu" id="dropdownMenu">
-      <h3>Switch to Imperial/Metric</h3>
-      
-      <div class="dropdown-section">
-        <h4>Temperature</h4>
-        <label>
-          <input type="radio" name="temperature" value="celsius" checked>
-          <span>Celsius (°C)</span>
-        </label>
-        <label>
-          <input type="radio" name="temperature" value="fahrenheit">
-          <span>Fahrenheit (°F)</span>
-        </label>
-      </div>
-      
-      <div class="dropdown-section">
-        <h4>Wind Speed</h4>
-        <label>
-          <input type="radio" name="windSpeed" value="kmh" checked>
-          <span>km/h</span>
-        </label>
-        <label>
-          <input type="radio" name="windSpeed" value="mph">
-          <span>mph</span>
-        </label>
-      </div>
-      
-      <div class="dropdown-section">
-        <h4>Precipitation</h4>
-        <label>
-          <input type="radio" name="precipitation" value="mm" checked>
-          <span>Millimeters (mm)</span>
-        </label>
-        <label>
-          <input type="radio" name="precipitation" value="inches">
-          <span>Inches (in)</span>
-        </label>
-      </div>
-    </div>
+          <div class="dropdown-menu" id="dropdownMenu">
+            <h3>Switch to Imperial</h3>
+            
+            <div class="dropdown-section">
+                <h4>Temperature</h4>
+                <label class="active" data-unit="temperature" data-value="celsius">
+                    <span>Celsius (°C)</span>
+                    <img class="checkmark" src="assets/images/icon-checkmark.svg" alt="check">
+                    <input type="radio" name="temperature" value="celsius" checked>
+                </label>
+                <label data-unit="temperature" data-value="fahrenheit">
+                    <span>Fahrenheit (°F)</span>
+                    <img class="checkmark" src="assets/images/icon-checkmark.svg" alt="check">
+                    <input type="radio" name="temperature" value="fahrenheit">
+                </label>
+            </div>
+            
+            <div class="dropdown-section">
+                <h4>Wind Speed</h4>
+                <label class="active" data-unit="windSpeed" data-value="kmh">
+                    <span>km/h</span>
+                    <img class="checkmark" src="assets/images/icon-checkmark.svg" alt="check">
+                    <input type="radio" name="windSpeed" value="kmh" checked>
+                </label>
+                <label data-unit="windSpeed" data-value="mph">
+                    <span>mph</span>
+                    <img class="checkmark" src="assets/images/icon-checkmark.svg" alt="check">
+                    <input type="radio" name="windSpeed" value="mph">
+                </label>
+            </div>
+            
+            <div class="dropdown-section">
+                <h4>Precipitation</h4>
+                <label class="active" data-unit="precipitation" data-value="mm">
+                    <span>Millimeters (mm)</span>
+                    <img class="checkmark" src="assets/images/icon-checkmark.svg" alt="check">
+                    <input type="radio" name="precipitation" value="mm" checked>
+                </label>
+                <label data-unit="precipitation" data-value="inches">
+                    <span>Inches (in)</span>
+                    <img class="checkmark" src="assets/images/icon-checkmark.svg" alt="check">
+                    <input type="radio" name="precipitation" value="inches">
+                </label>
+            </div>
+        </div>
 
     </nav>
   </header>
-
 
   <main>
     <section>
@@ -85,7 +91,14 @@
             <img src="assets/images/icon-search.svg" alt="search" class="search-icon">
             <input type="text" placeholder="Search for a city, e.g., New York" class="input">
           </div>
+          <div class="in-progress">
+            <img src="assets/images/icon-loading.svg" alt="loading">
+            <p>Search in progress</p>
+          </div>
           <button>Search</button>
+        </div>
+        <div class="no-results">
+          <p>No search result found!</p>
         </div>
       </div>
     </section>
@@ -328,10 +341,21 @@
     </div>
 
   </section>
+
+  
 </div>
   </main>
-  
 
+  <div class="center">
+    <img src="assets/images/icon-error.svg" alt="error" class="error">
+    <h1>Something went wrong</h1>
+    <p>We couldn't connect to the server due to (API error). Please try again in few minutes</p>
+    <div class="little-border">
+      <img src="assets/images/icon-retry.svg" alt="retry">
+      <span>Retry</span>
+    </div>
+  </div>
+  
   <script src="script.js"></script>
 </body>
 </html>

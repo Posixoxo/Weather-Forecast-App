@@ -1,540 +1,955 @@
 body{
-    background-color: hsl(243, 96%, 9%);
-    padding: 0;
-    margin: 0;
-    color: white;
-    font-family: "DM Sans", sans-serif;
+  background-color: hsl(243, 96%, 9%);
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: "DM Sans", sans-serif;
 }
 
 .navbar{
-    display: flex;
-    justify-content: space-between;
-    position: relative;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 15px 15px;
 }
 
-
 .img-1{
-    display: block;
-    width: 150px;
-    margin: 15px 15px;
-    height: auto;
+  display: block;
+  width: 150px;
+  max-width: 100%;
+  height: auto;
 }  
 
 .nav-2{
-    display: flex;
-    gap: 5px;
-    align-items: center;
-    margin: 15px 15px;
-    border: 1px solid transparent;
-    background-color: hsl(243, 27%, 20%);
-    height: 30px;
-    border-radius: 5px;
-    width: 100px;
-    cursor: pointer; /* Shows it's clickable */
-    transition: background-color 0.3s ease;
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  border: 1px solid transparent;
+  background-color: hsl(243, 27%, 20%);
+  height: 30px;
+  border-radius: 5px;
+  width: 100px;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-2 p, .nav-2 img{
+  padding: 0;
+  margin: 0;
 }
 
 .nav-2:hover{
-    background-color: hsl(243, 27%, 25%);
+  background-color: hsl(243, 27%, 25%);
 }
 
-.nav-2 img{
-    margin: auto 5px;
+.nav-2:focus{
+  outline: none;
+  border: 5px solid hsl(0, 0%, 100%);
 }
 
 .nav-2 p{
-    font-size: 16px;
+  font-size: 16px;
 }
 
 /* Dropdown Menu Styles */
 .dropdown-menu{
-    position: absolute;
-    top: 60px;
-    right: 15px;
-    background-color: hsl(243, 27%, 20%);
-    border-radius: 8px;
-    padding: 20px;
-    min-width: 250px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    display: none;
-    z-index: 1000;
+  position: absolute;
+  top: 40px;
+  right: 2px;
+  background-color: hsl(243, 27%, 20%);
+  border-radius: 8px;
+  padding: 20px;
+  min-width: 250px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: none;
+  z-index: 1000;
 }
 
 .dropdown-menu.active{
-    display: block;
+  display: block;
 }
 
 .dropdown-menu h3{
-    margin: 0 0 15px 0;
-    font-size: 16px;
-    color: #fff;
-    border-bottom: 1px solid hsl(243, 27%, 30%);
-    padding-bottom: 10px;
+  margin: 0 0 15px 0;
+  font-size: 16px;
+  color: #fff;
+  border-bottom: 1px solid hsl(243, 27%, 30%);
+  padding-bottom: 10px;
+}
+
+.dropdown-menu h3:focus{
+  outline: none;
+  border: 3px solid hsl(0, 0%, 100%);
+  cursor: pointer;
 }
 
 .dropdown-section{
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .dropdown-section:last-child{
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .dropdown-section h4{
-    margin: 0 0 8px 0;
-    font-size: 14px;
-    color: #aaa;
-    font-weight: 500;
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #aaa;
+  font-weight: 500;
 }
 
 .dropdown-section label{
-    display: flex;
-    align-items: center;
-    padding: 6px 0;
-    cursor: pointer;
-    color: #fff;
-    font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  margin-bottom: 6px;
+}
+
+.dropdown-section label:last-child{
+  margin-bottom: 0;
 }
 
 .dropdown-section label:hover{
-    color: #4a9eff;
+  background-color: hsl(243, 27%, 25%);
 }
 
+.dropdown-section label.active{
+  background-color: hsl(243, 27%, 28%);
+  border: 1px solid hsl(243, 27%, 35%);
+}
+
+.dropdown-section label span{
+  flex: 1;
+}
+
+/* Hide radio buttons */
 .dropdown-section input[type="radio"]{
-    margin-right: 10px;
-    cursor: pointer;
-    accent-color: #4a9eff;
+  display: none;
+}
+
+.dropdown-section .checkmark{
+  width: 15px;
+  height: 15px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Show checkmark only on active label */
+.dropdown-section label.active .checkmark{
+  opacity: 1;
+}
+
+.skyfall{
+  margin: 0 15px;
 }
 
 .skyfall h1{
-    font-size: 60px;
-    text-align: center;
-    margin-top: 60px;
-    align-items: center;
-    font-family: Plus Jakarta Sans;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 60px;
+  font-family: "Bricolage Grotesque", sans-serif;
 }
 
 .skyfall-2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .Search{
-    margin-top: 50px;
+  margin: 50px 15px;
 }
 
 .search-input-wrapper{
-    position: relative;
-    width: 100%;
-    max-width: 300px;
+  position: relative;
+  width: 100%;
+  max-width: 375px;
 }
 
 .search-icon{
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px;
-    height: 20px;
-    pointer-events: none; /* Allows clicking through the icon to the input */
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none; /* Allows clicking through the icon to the input */
 }
 
 .input{
-    width: 100%;
-    border: 1px solid transparent;
-    height: 50px;
-    background: hsl(243, 23%, 24%);
-    color: hsl(0, 0%, 100%);
-    border-radius: 10px;
-    padding-left: 45px; /* Space for icon + gap */
-    padding-right: 15px;
-    font-size: 16px;
-    box-sizing: border-box;
+  width: 100%;
+  border: 1px solid transparent;
+  height: 50px;
+  background: hsl(243, 23%, 24%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  padding-left: 45px; /* Space for icon + gap */
+  padding-right: 15px;
+  font-size: 16px;
+  box-sizing: border-box;
+  cursor: pointer;
 }
 
 .input::placeholder{
-    color: hsl(0, 0%, 60%);
+  color: hsl(0, 0%, 60%);
+}
+
+.input:hover{
+  border: 1px solid hsl(243, 23%, 24%);
 }
 
 .input:focus{
-    outline: none;
-    border: 1px solid hsl(233, 67%, 56%);
+  outline: none;
+  border: 2px solid hsl(0, 0%, 100%);
+}
+
+.input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.in-progress{
+  font-size: 14px;
+  color: hsl(0, 0%, 70%);
+  border: 1px solid transparent;
+  background-color: hsl(243, 23%, 24%);
+  display: none;
+  flex-direction: row;
+  gap: 15px;
+  width: 100%;
+  max-width: 375px;
+  border-radius: 10px;
+  padding: 1px 20px;
+  margin: 10px 15px 0 15px;
+  box-sizing: border-box;
+}
+
+.in-progress img{
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.in-progress p{
+  font-size: 12px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.no-results{
+  display: none;
+  font-size: 16px;
+  color: hsl(0, 0%, 70%);
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.no-results p{
+  font-size: 25px;
+  color: #ffffff;
+  margin: 0;
+  text-align: center;
+  font: 700;
+}
+
+.no-results.active{
+  display: block;
 }
 
 .skyfall-2 button{
-    width: 100%;
-    max-width: 300px;
-    height: 50px;
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: hsl(233, 67%, 56%);
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-sizing: border-box;
+  width: 100%;
+  max-width: 375px;
+  height: 50px;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: hsl(233, 67%, 56%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
 }
 
 .skyfall-2 button:hover{
-    background-color: hsl(233, 67%, 50%);
+  background-color: hsl(233, 67%, 50%);
+}
+
+.skyfall-2 button:focus{
+  border: 5px solid hsl(233, 67%, 50%);
+}
+
+.skyfall-2 button:disabled{
+  background-color: hsl(243, 23%, 24%);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Hide main content when no results */
+.content-hidden{
+  display: none !important;
 }
 
 .forecast{
-    display: flex;
-    flex-direction: column;
-    margin: 40px 10px 0 10px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    height: 280px;
-    border-radius: 15px;
-    border: 1px solid transparent;
-    background: url('assets/images/bg-today-small.svg') no-repeat center/cover;
-}
-
-.cast-text{
-    line-height: 0.1;
+  display: flex;
+  flex-direction: column;
+  margin: 40px 15px 0 15px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 320px;
+  border-radius: 15px;
+  border: 1px solid transparent;
+  background: url('assets/images/bg-today-small.svg') no-repeat center/cover;
 }
 
 .cast-text h4{
-    font-size: 30px;
-    text-align: center;
-    padding: 40px 0 0 0;
+  font-size: 30px;
+  text-align: center;
+  margin: 40px 0 0 0;
 }
 
 .cast-text p{
-    font-size: 20px;
-    text-align: center;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 12px;
 }
 
 .cast-asst{
-    display: flex;
-    flex-direction: row;
-    margin: 0 auto 40px auto;
-    gap: 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 
 .cast-img{
-    display: block;
-    max-width: 100%;
-    width: 120px;
-    height: auto;
-    margin: 15px auto;
+  display: block;
+  max-width: 100%;
+  width: 120px;
+  height: auto;
+  margin: 15px auto;
 }
 
 .cast-asst h2{
-    margin: 15px auto 5px auto;
-    font-size: 100px;
+  margin: 15px auto 5px auto;
+  font-size: 100px;
 }
-
-.mood-tabs{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
-    gap: 15px;
-    margin: 0 auto 40px auto;
-    padding: 0 10px;
-    max-width: 1200px;
-}
-
-.mood{
-    height: 100px;
-    border-radius: 10px;
-    border: 2px solid hsl(243, 27%, 30%);
-    background-color: hsl(243, 27%, 30%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 15px;
-    box-sizing: border-box;
-}
-
-.mood p{
-    margin: 0 0 5px 0;
-    font-size: 16px;
-    color: hsl(0, 0%, 70%);
-}
-
-.mood span{
-    margin: 0;
-    font-size: 28px;
-    font-weight: 600;
-}
-
-
 
 
 /* ===== Shared layout variables ===== */
 :root{
-    --container-max-width: 1200px;
-    --container-padding-xs: 12px;   /* used on very small screens (320/375) */
-    --container-padding-sm: 14px;   /* phones */
-    --container-padding-md: 16px;   /* tablets */
-    --container-padding-lg: 20px;   /* large screens */
-    --grid-gap-xs: 12px;
-    --grid-gap-sm: 14px;
-    --grid-gap-md: 16px;
-    --card-border: 2px;
-    --card-radius: 12px;
-    --card-bg: hsl(243, 27%, 20%);
-    --card-border-color: hsl(243, 27%, 30%);
-    --muted-text: hsl(250, 6%, 84%);
-  }
-  
+  --container-max-width: 1000px;
+  --container-padding-xs: 12px;   /* used on very small screens (320/375) */
+  --container-padding-sm: 14px;   /* phones */
+  --container-padding-md: 16px;   /* tablets */
+  --container-padding-lg: 20px;   /* large screens */
+  --grid-gap-xs: 12px;
+  --grid-gap-sm: 14px;
+  --grid-gap-md: 16px;
+  --card-border: 2px;
+  --card-radius: 12px;
+  --card-bg: hsl(243, 27%, 20%);
+  --card-border-color: hsl(243, 27%, 30%);
+  --muted-text: hsl(250, 6%, 84%);
+}
+
   /* ===== Reset / box-sizing for predictable math ===== */
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
   
-
-  .mood-tabs {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* default on smallest screens */
-    gap: var(--grid-gap-xs);
-    max-width: var(--container-max-width);
-    margin: 25px auto 40px auto;
-    padding-inline: var(--container-padding-xs);
-  }
+.mood-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* default on smallest screens */
+  gap: var(--grid-gap-xs);
+  max-width: var(--container-max-width);
+  margin: 25px auto 40px auto;
+  padding: var(--container-padding-xs);
+}
   
-  /* mood card */
-  .mood {
-    height: 120px;
-    border-radius: var(--card-radius);
-    border: var(--card-border) solid var(--card-border-color);
-    background-color: var(--card-bg);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 15px;
-    gap: 12px;
-  }
+.mood {
+  height: 120px;
+  border-radius: var(--card-radius);
+  border: var(--card-border) solid var(--card-border-color);
+  background-color: var(--card-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 15px;
+  gap: 12px;
+}
   
-  .mood p { margin: 4px 0 5px 0; font-size: 18px; color: var(--muted-text); }
-  .mood span { font-size: 32px; font-weight: 400; }
+.mood p { margin: 4px 0 5px 0; font-size: 18px; color: var(--muted-text); }
+.mood span { font-size: 32px; font-weight: 400; }
   
-  /* ===== DAY CAST container - exact same container sizing and centering as mood-tabs ===== */
-  .day-cast {
-    max-width: var(--container-max-width);
-    margin: 25px auto 40px auto;
-    padding-inline: var(--container-padding-xs); /* match mood-tabs at smallest size */
-  }
+/* ===== DAY CAST container - exact same container sizing and centering as mood-tabs ===== */
+.day-cast {
+  margin: 25px auto 40px auto;
+  padding: var(--container-padding-xs);
+}
   
-  .day-cast h3 {
-    margin: 0 0 12px 0;
-    font-size: 20px;
-    color: var(--muted-text);
-    padding-left: 0;
-  }
+.day-cast h3 {
+  margin: 0 0 15px 0;
+  font-size: 20px;
+  color: var(--muted-text);
+}
   
-  .day-cast-tabs {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* base: 3 cols at smallest widths -> 3-3-1 for 7 items */
-    gap: var(--grid-gap-xs);
-    max-width: var(--container-max-width);
-    margin: 0 auto;
-    padding-inline: 0; /* parent .day-cast supplies padding-inline to align edges with mood-tabs */
-  }
+.day-cast-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* base: 3 cols at smallest widths -> 3-3-1 for 7 items */
+  gap: var(--grid-gap-xs);
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+}
   
-  .cast-tabs {
-    width: 100%;                /* important: fill grid column */
-    min-height: 150px;         /* visual balance */
-    border-radius: 15px;
-    border: var(--card-border) solid var(--card-border-color);
-    background-color: var(--card-bg);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 12px;
-    gap: 12px;
-  }
+.cast-tabs {
+  width: 100%;                /* important: fill grid column */
+  min-height: 150px;         /* visual balance */
+  border-radius: 15px;
+  border: var(--card-border) solid var(--card-border-color);
+  background-color: var(--card-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  gap: 12px;
+}
   
-  /* label, icon and temps */
-  .cast-tabs > p:first-child {
-    margin: 0;
-    font-weight: 900;
-    font-size: 18px;
-    color: var(--muted-text);
-    text-align: center;
-  }
+/* label, icon and temps */
+.cast-tabs > p:first-child {
+  margin: 0;
+  font-weight: 900;
+  font-size: 18px;
+  color: var(--muted-text);
+  text-align: center;
+}
   
-  .img-z {
-    display: block;
-    width: 60px;
-    height: auto;
-    margin: 0 auto;
-  }
+.img-z {
+  display: block;
+  width: 60px;
+  height: auto;
+  margin: 0 auto;
+}
   
-  .tabs {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
   
-  .tabs p {
-    margin: 8px 0 0 0;
-    font-weight: 900;
-    color: var(--muted-text);
-  }
+.tabs p {
+  margin: 8px 0 0 0;
+  font-weight: 900;
+  color: var(--muted-text);
+}
 
 
-
-  /* ---------- Hourly container ---------- */
+/* ---------- Hourly container ---------- */
 .hourly-container {
-    padding: 20px;
-    margin: 30px 10px;
-    background-color: hsl(243, 27%, 20%);
-    border-radius: 15px;
-    box-sizing: border-box;
-    max-width: 420px; /* adjust to the card width you use; this keeps layout tidy */
-  }
+  padding: 20px;
+  margin: 30px 15px;
+  background-color: hsl(243, 27%, 20%);
+  border-radius: 15px;
+  box-sizing: border-box;
+  max-width: 420px;
+}
   
-  .hour-cast {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    margin-bottom: 12px;
-  }
+.hour-cast {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
   
-  .hour-cast h3 {
-    margin: 0;
-    font-size: 20px;
-    color: hsl(250, 6%, 84%);
-    font-weight: 700;
+.hour-cast h3 {
+  margin: 0;
+  font-size: 20px;
+  color: hsl(250, 6%, 84%);
+  font-weight: 700;
+}
+
+.date-cast {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: hsl(243, 23%, 30%);
+  border-radius: 8px;
+  padding: 6px 10px;
+  min-width: 110px;
+  height: 36px;
+  cursor: pointer;
+  position: relative; /* for dropdown list positioning */
+  border: 1px solid rgba(255,255,255,0.02);
+}
+  
+.date-cast p {
+  margin: 0;
+  color: hsl(250, 6%, 84%);
+  font-weight: 600;
+  font-size: 14px;
+}
+  
+.date-cast img {
+  width: 18px;
+  height: auto;
+  display: block;
+  pointer-events: none;
+}
+  
+/* dropdown list (hidden by default) */
+.date-list {
+  list-style: none;
+  margin: 6px 0 0 0;
+  padding: 6px 3px;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  background: hsl(243, 27%, 20%);;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.02);
+  min-width: 160px;
+  z-index: 50;
+}
+  
+.date-list li {
+  padding: 8px 12px;
+  margin-top: 2px;
+  color: hsl(250, 6%, 84%);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.date-list li:hover,
+.date-list li:focus {
+  background: hsl(243, 23%, 30%);
+  border-radius: 8px;
+  outline: none;
+}
+  
+.fore-tabs{
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  gap: 12px;
+  background-color: hsl(243, 23%, 30%);
+  border: 1px solid hsl(243, 23%, 30%);
+  border-radius: 8px;
+  padding: 12px;
+  margin: 12px 0;
+  box-sizing: border-box;
+}
+  
+/* left block: icon + time label */
+.time-tabs{
+  display: flex;
+  align-items: center;
+  gap: 12px;   
+  min-width: 0;  /* allows text to shrink if needed */
+}
+  
+.img-x{
+  width: 36px;
+  height: auto;
+  display: block;
+  flex: 0 0 36px; /* fixed image footprint so layout stays stable */
+  margin-left: 2px; /* small breathing room from left edge */
+}
+  
+.time-label {
+  margin: 0;
+  color: hsl(250, 6%, 84%);
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+  
+.temp {
+  margin: 0;
+  color: hsl(250, 6%, 84%);
+  font-weight: 800;
+  font-size: 16px;
+  flex: 0 0 44px;    /* reserved width so it doesn't move across breakpoints */
+  text-align: right;
+}
+
+/* API error state */
+
+.center {
+  display: none; 
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Bricolage Grotesque", sans-serif;
+  padding: 40px 20px;
+  min-height: 50vh;
+}
+
+.center h1 {
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: hsl(0, 0%, 100%);
+}
+
+.center p {
+  max-width: 330px;
+  font-size: 11px;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: hsl(0, 0%, 70%);
+  line-height: 1.6;
+}
+
+.error {
+  width: 30px;
+  height: auto;
+  display: block;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.little-border {
+  display: flex;
+  flex-direction: row;
+  gap: 7px;
+  border-radius: 5px;
+  border: 1px solid hsl(243, 27%, 30%);
+  max-width: 100%;
+  width: 70px;
+  padding: 5px 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(243, 27%, 20%);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.little-border:hover {
+  background-color: hsl(233, 67%, 56%);
+  transform: scale(1.05);
+}
+
+.little-border:active {
+  transform: scale(0.98);
+}
+
+.little-border img {
+  width: 12px;
+  height: 12px;
+}
+
+.little-border span {
+  font-size: 12px;
+  color: hsl(0, 0%, 100%);
+}
+
+
+/* CONTENT LOADING STATES CSS  */
+
+/* Forecast Loading State */
+.forecast-loading {
+  position: relative;
+  min-height: 200px;
+  background-image: none !important;
+  background-color: hsl(243, 27%, 25%) !important;
+  border-radius: 10px;
+}
+
+.forecast-loading .cast-text,
+.forecast-loading .cast-asst {
+  visibility: hidden;
+}
+
+.loading-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+}
+
+/* Three Dots Animation */
+.loading-dots {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 15px;
+  position: relative;
+  height: 30px;
+}
+
+.loading-dots span {
+  width: 15px;
+  height: 15px;
+  background-color: hsl(0, 0%, 100%); 
+  border-radius: 50%;
+  animation: bounce 1.4s infinite ease-in-out both;
+  position: absolute;
+  bottom: 0;
+}
+
+.loading-dots span:nth-child(1) {
+  left: 0;
+  animation-delay: -0.32s;
+  transform: translateY(0px);
+}
+
+.loading-dots span:nth-child(2) {
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  animation-delay: -0.16s;
+  animation: bounce-middle 1.4s infinite ease-in-out both;
+}
+
+.loading-dots span:nth-child(3) {
+  right: 0;
+  animation-delay: 0s;
+  transform: translateY(0px);
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes bounce-middle {
+  0%, 80%, 100% {
+    opacity: 0.3;
+    transform: translateX(-50%) translateY(-8px) scale(0.8);
+  }
+  40% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-8px) scale(1.2);
+  }
+}
+
+.loading-text {
+  color: hsl(0, 0%, 70%);
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+/* Mood Tabs Loading - Show dash instead of data */
+.mood span.loading-placeholder {
+  color: hsl(0, 0%, 100%);
+  font-size: 20px;
+}
+
+/* Day Cast Tabs Loading - Fade out completely */
+.cast-tabs.loading > * {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.cast-tabs {
+  transition: opacity 0.3s ease;
+}
+
+/* Hourly Forecast Tabs Loading - Keep border, hide content */
+.fore-tabs.loading .time-tabs,
+.fore-tabs.loading .temp {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.fore-tabs .time-tabs,
+.fore-tabs .temp {
+  transition: opacity 0.3s ease;
+}
+
+/* Date List Loading - Show dashes */
+.date-list.loading li {
+  color: hsl(0, 0%, 50%);
+}
+
+/* Mobile Specific Adjustments */
+@media (max-width: 1023px) {
+  .forecast-loading {
+    min-height: 180px;
   }
 
-  .date-cast {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background-color: hsl(243, 23%, 30%);
-    border-radius: 8px;
-    padding: 6px 10px;
-    min-width: 110px;
-    height: 36px;
-    cursor: pointer;
-    position: relative; /* for dropdown list positioning */
-    border: 1px solid rgba(255,255,255,0.02);
+  .loading-dots {
+    height: 25px;
+    gap: 10px;
+  }
+
+  .loading-dots span:nth-child(2) {
+    transform: translateX(-50%) translateY(-6px);
   }
   
-  .date-cast p {
-    margin: 0;
-    color: hsl(250, 6%, 84%);
-    font-weight: 600;
-    font-size: 14px;
+  @keyframes bounce-middle {
+    0%, 80%, 100% {
+      opacity: 0.3;
+      transform: translateX(-50%) translateY(-6px) scale(0.8);
+    }
+    40% {
+      opacity: 1;
+      transform: translateX(-50%) translateY(-6px) scale(1.2);
+    }
   }
   
-  .date-cast img {
-    width: 18px;
-    height: auto;
-    display: block;
-    pointer-events: none;
+  .loading-dots span {
+    width: 8px;
+    height: 8px;
   }
   
-  /* dropdown list (hidden by default) */
-  .date-list {
-    list-style: none;
-    margin: 6px 0 0 0;
-    padding: 6px 0;
-    position: absolute;
-    right: 0;
-    top: calc(100% + 8px);
-    background: hsl(243, 23%, 30%);
-    border-radius: 8px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
-    border: 1px solid rgba(255,255,255,0.02);
-    min-width: 140px;
-    z-index: 50;
+  .loading-text {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .forecast-loading {
+    min-height: 220px;
   }
   
-  .date-list li {
-    padding: 8px 12px;
-    color: hsl(250, 6%, 84%);
-    font-size: 14px;
-    cursor: pointer;
+  .loading-dots {
+    height: 35px;
+    gap: 15px;
   }
   
-  /* hover/focus states for accessibility */
-  .date-list li:hover,
-  .date-list li:focus {
-    background: hsl(243, 27%, 28%);
-    outline: none;
+  .loading-dots span {
+    width: 12px;
+    height: 12px;
   }
   
-  /* ---------- Fore-tabs (rows) ---------- */
-  /* make each row a two-column flex: left = icon+time, right = temperature pinned right */
-  .fore-tabs{
-    display: flex;
-    align-items: center;
-    justify-content: space-between; 
-    gap: 12px;
-    background-color: hsl(243, 23%, 30%);
-    border: 1px solid hsl(243, 23%, 30%);
-    border-radius: 8px;
-    padding: 12px;
-    margin: 12px 0;
-    box-sizing: border-box;
+  .loading-dots span:nth-child(2) {
+    transform: translateX(-50%) translateY(-10px);
   }
   
-  /* left block: icon + time label */
-  .time-tabs{
-    display: flex;
-    align-items: center;
-    gap: 12px;   
-    min-width: 0;  /* allows text to shrink if needed */
+  @keyframes bounce-middle {
+    0%, 80%, 100% {
+      opacity: 0.3;
+      transform: translateX(-50%) translateY(-10px) scale(0.8);
+    }
+    40% {
+      opacity: 1;
+      transform: translateX(-50%) translateY(-10px) scale(1.2);
+    }
   }
   
-  .img-x{
-    width: 36px;
-    height: auto;
-    display: block;
-    flex: 0 0 36px; /* fixed image footprint so layout stays stable */
-    margin-left: 2px; /* small breathing room from left edge */
-  }
-  
-  .time-label {
-    margin: 0;
-    color: hsl(250, 6%, 84%);
-    font-weight: 600;
-    font-size: 14px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  
-  .temp {
-    margin: 0;
-    color: hsl(250, 6%, 84%);
-    font-weight: 800;
+  .loading-text {
     font-size: 16px;
-    flex: 0 0 44px;    /* reserved width so it doesn't move across breakpoints */
-    text-align: right;
+  }
+}
+
+
+/* AUTOCOMPLETE SUGGESTIONS */
+
+.suggestions-container {
+  font-size: 14px;
+  color: hsl(0, 0%, 70%);
+  border: 1px solid transparent;
+  background-color: hsl(243, 23%, 24%);
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  max-width: 375px;
+  border-radius: 10px;
+  margin: 10px 15px 0 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  order: 2; /* Places it between input (order: 1) and button (order: 3) */
+ }
+
+.search-input-wrapper {
+  order: 1;
+}
+
+.skyfall-2 button {
+   order: 3;
+}
+  
+.in-progress {
+   order: 2; /* Same order as suggestions to maintain position */
+}
+  
+.suggestion-item {
+  padding: 12px 20px;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin: 0 3px;
+}
+  
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+  
+.suggestion-item:hover,
+.suggestion-item.highlighted {
+  background-color: hsl(243, 27%, 20%);
+  border-radius: 10px;
+}
+  
+  @media (min-width: 1024px) {
+    .suggestions-container {
+      position: absolute;
+      top: 60px;
+      left: 22px;
+      right: auto;
+      margin: 10px 0 0 0;
+      width: 100%;
+      max-width: 500px;
+      z-index: 100;
+    }
+    
+    .suggestion-item {
+      font-size: 15px;
+      padding: 14px 20px;
+    }
+
+    .search-input-wrapper {
+      order: initial;
+    }
+    
+    .skyfall-2 button {
+      order: initial;
+    }
+    
+    .in-progress {
+      order: initial;
+    }
   }
 
 
   
   /* ===== media queries for mood-tabs and day-cast-tabs ===== */
-  @media (min-width: 320px) {
-    :root { /* ensure variables applied; this local reassign helps some old browsers */
-      --container-padding: var(--container-padding-xs);
-    }
   
-    .mood-tabs { padding-inline: var(--container-padding-xs); gap: var(--grid-gap-xs); }
-    .day-cast { padding-inline: var(--container-padding-xs); }
-    .day-cast-tabs { gap: var(--grid-gap-xs); }
-  
-    .cast-tabs { min-height: 140px; padding: 10px; }
-    .cast-tabs > p:first-child { font-size: 16px; }
-    .tabs { gap: 14px; }
-  }
-  
-  /* Larger phones */
   @media (min-width: 480px) {
     .mood-tabs { padding-inline: var(--container-padding-sm); gap: var(--grid-gap-sm); }
     .day-cast { padding-inline: var(--container-padding-sm); }
@@ -551,81 +966,43 @@ body{
   
     .cast-tabs { min-height: 160px; padding: 14px; }
   }
-  
-    /* Small desktops: switch mood-tabs to 4 columns, keep day-cast 3 columns but align edges */
+
+  @media (min-width: 700px){
+    .day-cast-tabs { grid-template-columns: repeat(4, 1fr); gap: var(--grid-gap-md); }
+  }
+
+  @media (min-width: 800px){
+    .day-cast-tabs { grid-template-columns: repeat(5, 1fr); gap: var(--grid-gap-md); }
+  }
+
   @media (min-width: 900px) {
     .mood-tabs { grid-template-columns: repeat(4, 1fr); gap: var(--grid-gap-md); padding-inline: var(--container-padding-md); }
-  
-    /* Strategy A: keep cast 3 columns, but ensure padding and gap are identical to mood-tabs
-       so left/right edges continue to align. This keeps the 3-3-1 "block" below the mood grid. */
     .day-cast { padding-inline: var(--container-padding-md); }
-    .day-cast-tabs { grid-template-columns: repeat(3, 1fr); gap: var(--grid-gap-md); }
+    .day-cast-tabs { grid-template-columns: repeat(6, 1fr); gap: var(--grid-gap-md); }
   
     .cast-tabs { min-height: 170px; padding: 16px; }
+  }
+
+  @media (min-width: 1000px){
+    .day-cast-tabs { grid-template-columns: repeat(7, 1fr); gap: var(--grid-gap-md); }
   }
 
   
     /* ---------- media queries for hourly forecast  ---------- */
   
-  @media (max-width: 375px) {
-    .hourly-container { 
-        padding: 16px;
-        max-width: 375px;
-    }
-    .date-cast { min-width: 100px; height: 34px; padding: 6px 8px; }
-    .date-list { min-width: 130px; }
-    .img-x { width: 32px; flex: 0 0 32px; margin-left: 0; }
-    .time-label { font-size: 13px; }
-    .temp { flex: 0 0 40px; font-size: 15px; }
-    .fore-tabs { padding: 10px; margin: 10px 0; }
-}
-
-/* Medium phones (376px - 767px) */
-@media (min-width: 376px) and (max-width: 539px) {
-    .hourly-container { 
-        max-width: 460px;
-    }
-    .img-x { width: 36px; flex: 0 0 36px; }
-    .temp { flex: 0 0 44px; }
-    .time-label { font-size: 14px; }
-}
-
-@media (min-width: 540px) and (max-width: 767px) {
-    .hourly-container { 
-        max-width: 510px; 
+  @media(min-width: 450px){
+    .hourly-container{
+        max-width: 100%; 
         padding: 20px;
-        margin: 30px 15px; 
+        margin: 30px 15px;
     }
-    .hour-cast h3 {
-        font-size: 21px;
-    }
-    .date-cast {
-        min-width: 115px;
-        height: 36px;
-    }
-    .img-x { 
-        width: 38px; 
-        flex: 0 0 38px; 
-    }
-    .temp { 
-        flex: 0 0 46px; 
-        font-size: 16px; 
-    }
-    .time-label { 
-        font-size: 14px; 
-    }
-    .fore-tabs { 
-        padding: 13px; 
-        margin: 12px 0;
-    }
-}
+  }
 
-/* Tablets (768px - 1023px */
 @media (min-width: 768px) and (max-width: 1023px) {
     .hourly-container { 
-        max-width: 720px; 
-        padding: 24px;
-        margin: 30px auto;
+        max-width: 100%; 
+        padding: 20px;
+        margin: 30px 15px;
     }
     .hour-cast h3 {
         font-size: 22px;
@@ -655,41 +1032,35 @@ body{
     }
 }
 
-
-
 /* ====== DESKTOP LAYOUT (1024px and above) ====== */
 @media (min-width: 1024px) {
-  
-  /* ---------- MAIN GRID WRAPPER ---------- */
-  header,
-  main {
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 40px;
-    padding-right: 40px;
+
+  body{
+    padding: 0;
+    margin: 0;
   }
 
   .son-man {
     display: grid;
-    grid-template-columns: 2.5fr 1.5fr;
-    gap: 30px;
-    padding: 0 40px;
-    max-width: 1600px;
-    margin: 0 auto;
-  }
-
-  /* Navbar spans full width */
-  .navbar {
-    grid-column: 1 / -1;
+    grid-template-columns: 1.8fr 1fr;
+    gap: 18px;
+    margin: 0 15px;
+    max-width: 100%; /* Prevents container from exceeding viewport */
   }
 
   /* ---------- LEFT SIDE (desktop-drop) ---------- */
   .desktop-drop {
     grid-column: 1;
+    min-width: 0; /* CRITICAL: Allows content to shrink if needed */
   }
 
-  /* ---------- SEARCH SECTION - HORIZONTAL LAYOUT ---------- */
+  /* ---------- RIGHT SIDE (desktop-drop2) ---------- */
+  .desktop-drop2 {
+    grid-column: 2;
+    padding-top: 0;
+    min-width: 0; /* CRITICAL: Allows content to shrink if needed */
+  }
+
   .skyfall h1 {
     font-size: 50px;
     margin-top: 40px;
@@ -702,6 +1073,8 @@ body{
     gap: 15px;
     max-width: 700px;
     margin: 50px auto 0 auto;
+    flex-wrap: wrap; /* Allow wrapping for progress indicator */
+    position: relative;
   }
 
   .search-input-wrapper {
@@ -722,26 +1095,49 @@ body{
     white-space: nowrap;
   }
 
+  /* Position progress indicator below input */
+  .in-progress {
+    position: absolute;
+    top: 60px; /* Height of input (50px) + gap (10px) */
+    left: 24px;
+    right: auto;
+    margin: 5px 0 0 0;
+    width: 100%;
+    max-width: 500px; /* Match input width */
+  }
+
+  .no-results p{
+    font-size: 40px;
+    margin-top: 40px;
+  }
+
   /* ---------- FORECAST CARD ---------- */
   .forecast {
     background: url('assets/images/bg-today-large.svg') no-repeat center/cover;
     height: 340px;
     margin: 40px 0 0 0;
+    max-width: 100%; /* to fit grid column */
     display: flex;
     flex-direction: row;
     padding-top: 50px;
   }
 
   .cast-text{
-    margin: 0 20px 100px 20px;
+    margin: 0 10px 0 10px;
+    padding: 0 0 40px 0;
+  }
+
+  .cast-text h4{
+    font-size: 20px;
+    text-align: left;
   }
 
   .cast-asst {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 28px; 
-    margin-right: 20px;
+    gap: 15px;
+    margin: 0 10px; 
   }
 
   .cast-img {
@@ -750,7 +1146,7 @@ body{
   }
 
   .cast-asst h2 {
-    font-size: 120px;
+    font-size: 110px;
     margin: 0;
   }
 
@@ -766,10 +1162,120 @@ body{
   /* ---------- MOOD CARDS ---------- */
   .mood-tabs {
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    max-width: 100%;
+    gap: 16px;
+    max-width: 100%; /* to fit grid column */
     padding-inline: 0;
-    margin: 25px 0 40px 0;
+    margin: 25px 0 0 0;
+  }
+
+  .mood {
+    height: 130px; 
+    padding: 16px; 
+  }
+
+  .mood p {
+    font-size: 16px;
+  }
+
+  .mood span {
+    font-size: 30px; 
+  }
+
+  /* ---------- DAILY FORECAST - 7 COLUMN DESIGN ---------- */
+  .day-cast {
+    margin: 10px 0;
+    padding-inline: 0;
+    max-width: 100%; /* to fit grid column */
+  }
+
+  .day-cast h3 {
+    font-size: 20px;
+    margin-bottom: 16px; 
+  }
+
+  .day-cast-tabs {
+    grid-template-columns: repeat(7, 1fr); /* ✅  7 equal columns */
+    gap: 8px; /* Reduced from original to fit all 7 columns */
+    max-width: 100%; /* to respect parent container */
+    padding-inline: 0;
+  }
+
+  .cast-tabs {
+    min-height: 130px; 
+    padding: 12px; 
+  }
+
+  .cast-tabs > p:first-child {
+    font-size: 15px; 
+  }
+
+  .img-z {
+    width: 50px; 
+  }
+
+  .tabs {
+    gap: 12px;
+  }
+
+  .tabs p {
+    font-size: 15px; 
+  }
+
+  /* ---------- HOURLY FORECAST ---------- */
+  .hourly-container {
+    max-width: 100%;
+    background-color: hsl(243, 27%, 20%);
+    border-radius: 15px;
+    margin: 40px 0 0 0;
+  }
+
+  .hour-cast h3 {
+    font-size: 20px;
+  }
+
+  .date-cast {
+    min-width: 120px; 
+    height: 36px;
+  }
+
+  .fore-tabs {
+    padding: 15px 14px; 
+    margin: 12px 0; 
+  }
+
+  .img-x {
+    width: 36px; 
+    flex: 0 0 36px;
+  }
+
+  .time-label {
+    font-size: 14px;
+  }
+
+  .temp {
+    flex: 0 0 44px; 
+    font-size: 15px; 
+  }
+}
+
+/* ====== EXTRA LARGE SCREENS (1400px and above) ====== */
+@media (min-width: 1400px) {
+  header,
+  main {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .skyfall h1 {
+    font-size: 80px;
+  }
+
+  .son-man {
+    gap: 30px; /* Even more breathing room */
+  }
+
+  .mood-tabs {
+    gap: 20px;
   }
 
   .mood {
@@ -781,58 +1287,38 @@ body{
     font-size: 34px;
   }
 
-  /* ---------- DAILY FORECAST ---------- */
-  .day-cast {
-    margin: 40px 0;
-    padding-inline: 0;
-  }
-
   .day-cast h3 {
     font-size: 22px;
     margin-bottom: 18px;
   }
 
   .day-cast-tabs {
-    grid-template-columns: repeat(7, 1fr);
-    gap: 18px;
-    padding-inline: 0;
+    gap: 16px; /* More comfortable spacing */
   }
 
   .cast-tabs {
-    min-height: 180px;
-    padding: 16px;
+    min-height: 170px;
+    padding: 15px;
   }
 
   .cast-tabs > p:first-child {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .img-z {
-    width: 70px;
+    width: 60px;
   }
 
   .tabs {
-    gap: 18px;
+    gap: 16px;
   }
 
   .tabs p {
-    font-size: 18px;
-  }
-
-  /* ---------- RIGHT SIDE (desktop-drop2) ---------- */
-  .desktop-drop2 {
-    grid-column: 2;
-    padding-top: 0;
+    font-size: 17px;
   }
 
   .hourly-container {
-    max-width: 100%;
-    background-color: hsl(243, 27%, 20%);
-    border-radius: 15px;
-    padding: 24px;
-    margin: 40px 0 0 0;
-    position: sticky;
-    top: 20px;
+    padding: 20px;
   }
 
   .hour-cast h3 {
@@ -862,42 +1348,39 @@ body{
     flex: 0 0 48px;
     font-size: 16px;
   }
-
 }
 
-/* ====== EXTRA LARGE SCREENS (1400px and above) ====== */
-@media (min-width: 1400px) {
-  header,
-  main {
-    padding-left: 60px;
-    padding-right: 60px;
-  }
-
-  .skyfall h1 {
-    font-size: 80px;
-  }
-
+/* ====== ULTRA WIDE SCREENS (1600px and above) - Full original sizes ====== */
+@media (min-width: 1600px) {
   .son-man {
     gap: 40px;
-  }
-
-  .mood-tabs {
-    gap: 24px;
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .day-cast-tabs {
-    gap: 20px;
+    gap: 20px; /* Full comfortable spacing */
+  }
+
+  .cast-tabs {
+    min-height: 180px;
+    padding: 16px;
+  }
+
+  .cast-tabs > p:first-child {
+    font-size: 18px;
+  }
+
+  .img-z {
+    width: 70px; /* Back to your original size */
+  }
+
+  .tabs {
+    gap: 18px;
+  }
+
+  .tabs p {
+    font-size: 18px;
   }
 }
-
-.attribution { 
-  font-size: 11px; 
-  text-align: center;
-  padding: 20px;
-}
-.attribution a { 
-  color: hsl(228, 45%, 44%); 
-}
-
-
-
